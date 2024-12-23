@@ -1,0 +1,2 @@
+﻿# İstatistik Raporu (Windows Forms)
+Bu proje, [proje açıklaması] için geliştirilmiştir. Windows Form Application uygulamasında EntityFramework metotlarını kullanarak, oluşturmuş olduğum örnek veritabanı ve içerisindeki veriler için bir İstatistik uygulaması tasarladım.
