@@ -27,8 +27,10 @@ namespace CSharpEgitimKampi301.EFProject
             lblLocationCount.Text = db.Location.Count().ToString();
             lblSumCapacity.Text = db.Location.Sum(x => x.Capacity).ToString();
             lblGuideCount.Text = db.Guide.Count().ToString();
-            lblAvgCapacity.Text = db.Location.Average(x => x.Capacity).ToString();
-            decimal? l_avgLocationPrice = Convert.ToDecimal(db.Location.Average(x => x.Price));
+            decimal? l_avgCapacity = Convert.ToDecimal(db.Location.Average(x => x.Capacity));
+
+            lblAvgCapacity.Text = l_avgCapacity.HasValue ? l_avgCapacity.Value.ToString("0.00") : string.Empty;   
+            decimal ? l_avgLocationPrice = Convert.ToDecimal(db.Location.Average(x => x.Price));
             lblAvgLocationPrice.Text = l_avgLocationPrice.HasValue ? l_avgLocationPrice.Value.ToString("0.00") : string.Empty;
             int lastCountryId = db.Location.Max(x => x.LocationId);
             lblLastCountry.Text = db.Location.Where(x => x.LocationId == lastCountryId).Select(x => x.Country).FirstOrDefault();
