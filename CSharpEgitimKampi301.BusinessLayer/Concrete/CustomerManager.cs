@@ -23,7 +23,6 @@ namespace CSharpEgitimKampi301.BusinessLayer.Concrete
 
         public List<Customer> TGetAll()
         {
-           
           return  _customerDal.GetAll();
         }
 
